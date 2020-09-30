@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .colbtn {
+            height: 38px;
+            width: 38px;
+            margin-left: 4px;
+        }
+    </style>
+    <link rel="stylesheet" href="prism.css">
+    <title>Welcome To PostMaster</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-4">Welcome To PostMaster</h1>
+
+        <!-- url Box -->
+        <div class="form-group row">
+            <label for="url" class="col-sm-2 col-form-label">
+                <h4>Url</h4>
+            </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="url">
+            </div>
+        </div>
+
+        <!-- request type -->
+        <div class="form-group row">
+            <label for="url" class="col-sm-2 col-form-label">
+                <h4>Request Type</h4>
+            </label>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="requestType" id="get" value="GET" checked>
+                    <label class="form-check-label" for="get">
+                        GET
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="requestType" id="post" value="POST">
+                    <label class="form-check-label" for="post">
+                        POST
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Content type -->
+        <div class="form-group row">
+            <label for="url" class="col-sm-2 col-form-label">
+                <h4>Content Type</h4>
+            </label>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contentType" id="json" value="json" checked>
+                    <label class="form-check-label" for="json">
+                        Json
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contentType" id="customparam"
+                        value="customparam">
+                    <label class="form-check-label" for="customparam">
+                        Custom Parameter
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- json div when show u select json content type and hide when you select custom parameter -->
+        <div class="form-group " id="jsondiv">
+            <div class="row">
+                <label for="jsonTextarea" class="col-sm-2 col-form-label">
+                    <h4>Enter Request Json</h4>
+                </label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="jsonTextarea" rows="4"></textarea>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- customparam div when show u select json content type and hide when you select custom parameter -->
+        <div id="customparamdiv">
+            <div class="form-row">
+
+                <label for="url" class="col-form-label col-sm-2">
+                    <h4>Parameter</h4>
+                </label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="Parameter Key 1" id="Parameterkey1">
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="Parameter Value 1" id="Parametervalue1">
+                </div>
+
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-dark" id="paramBtn">+</button>
+                </div>
+            </div>
+            <div id="addparamdiv"></div>
+
+        </div>
+
+
+
+        <!-- submit button  -->
+        <div>
+            <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+        </div>
+
+        <!-- responce div -->
+        <div class="form-group row" id="responsediv">
+            <label for="responseTextarea" class="col-sm-2 col-form-label">
+                <h4>Responce</h4>
+            </label>
+            <div class="col-sm-10">
+                <!-- <textarea class="form-control" id="responseTextarea" rows="4">Here your responce ...</textarea> -->
+                <pre id='responseText' class="language-javascript"> <code id='responseTextarea' class="language-markup"> Your response will appear here </code> </pre>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script src="prism.js"></script>
+</body>
+
+</html>
